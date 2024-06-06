@@ -55,6 +55,7 @@ bun add zod
 ## Params validation
 
 ![validator options](/public/tutorial-assets/image.png)
+
 after adding the zValidator you can choose what you are validating
 Here is an example showing how to validate the param
 ![Example](/public/tutorial-assets/image-1.png)
