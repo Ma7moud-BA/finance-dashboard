@@ -9,6 +9,7 @@ import {
 	UserButton,
 } from "@clerk/nextjs";
 import "./globals.css";
+import { QueryProvider } from "@/providers/query-provider";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
@@ -24,7 +25,10 @@ export default function RootLayout({
 	return (
 		<ClerkProvider>
 			<html lang="en">
-				<body className={inter.className}>{children}</body>
+				<body className={inter.className}>
+					{/*  passing the children inside the query provider which is a client component will make the children a client component, thi sis a feature inside next js that you can safely pass server children inside a client component and they will stay as server components */}
+					<QueryProvider>{children}</QueryProvider>
+				</body>
 			</html>
 		</ClerkProvider>
 	);

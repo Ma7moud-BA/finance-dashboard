@@ -93,3 +93,7 @@ app.get("/hello", clerkMiddleware(), (c) => {
 	});
 });
 ```
+
+## Using RPC with larger application
+
+follow [this document](https://hono.dev/guides/rpc) to know how to use RPC with hono in a large project
