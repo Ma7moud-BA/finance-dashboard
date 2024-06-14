@@ -1,3 +1,13 @@
+"use client";
+
+import { useNewAccount } from "@/features/hooks/use-new-account";
+import { Button } from "@/components/ui/button";
 export default function Home() {
-	return <div>Home Page</div>;
+	const { isOpen, onClose, onOpen } = useNewAccount();
+
+	return (
+		<div>
+			<Button onClick={onOpen}> Add an account</Button>
+		</div>
+	);
 }
